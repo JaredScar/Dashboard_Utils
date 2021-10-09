@@ -269,9 +269,8 @@ class DataTable {
         }
         ?>
 <script>
-    var table_<?= $this->identifer ?> = $('#<?= $this->identifer ?>').DataTable().options({
-        <?= !empty($this->options) ? json_encode($this->options, JSON_PRETTY_PRINT) : ''; ?>
-    });
+    var table_<?= $this->identifer ?> = $('#<?= $this->identifer ?>').DataTable()
+        <?= !empty($this->options) ? ".options({" . json_encode($this->options, JSON_PRETTY_PRINT) . "})" : ''; ?>;
 </script>
         <?php
         $this->installedScriptIncludes = true;
