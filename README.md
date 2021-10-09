@@ -32,7 +32,7 @@ $datatable->withjQueryUI();
 $datatable->withSemanticUI();
 // This will initialize a DataTable with Semantic UI styling
 ```
-#### Adding Extensions
+### Adding Extensions
 ```php
 use DataTables\DataTable;
 include_once 'DataTables/DataTable.php';
