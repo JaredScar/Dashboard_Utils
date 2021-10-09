@@ -1,7 +1,7 @@
 # Dashboard_Utils
 
 ## What is it?
-Dashbaord_Utils is a repository I made on October 8th, 2021. I wanted a repository I could use for dashboards in the future that I make. It will include useful and functional wrappers for DataTables, Form-Control, and Charts. Feel free to give it a star if you use it for one of your projects or are planning to! Pull requests are always welcome as well. Let's benefit the open source community as a whole!
+Dashboard_Utils is a repository I made on October 8th, 2021. I wanted a repository I could use for dashboards in the future. It will include useful and functional wrappers for DataTables, Form-Control, and Charts. Feel free to give it a star if you use it for one of your projects or are planning to! Pull requests are always welcome as well. Let's benefit the open source community as a whole!
 ## DataTables
 ### Initializing a DataTable with styles
 ```php
