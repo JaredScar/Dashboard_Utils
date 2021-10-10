@@ -21,7 +21,9 @@ class DataTable {
     public function withBootstrap3() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css';
+        $this->scriptIncludes['DataTable'][] = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js';
         $this->style = 'bootstrap';
@@ -31,6 +33,7 @@ class DataTable {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css';
+        $this->linkIncludes['DataTable'][] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js';
         $this->style = 'bootstrap4';
@@ -39,6 +42,7 @@ class DataTable {
     public function withBootstrap5() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css';
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js';
@@ -48,6 +52,7 @@ class DataTable {
     public function withBulma() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css';
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.bulma.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.bulma.min.js';
@@ -57,6 +62,7 @@ class DataTable {
     public function withFoundation() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css';
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.foundation.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.foundation.min.js';
@@ -66,6 +72,7 @@ class DataTable {
     public function withjQueryUI() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = 'https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js';
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.jqueryui.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.jqueryui.min.js';
@@ -75,6 +82,7 @@ class DataTable {
     public function withSemanticUI() {
         $this->linkIncludes['DataTable'] = [];
         $this->scriptIncludes['DataTable'] = [];
+        $this->linkIncludes['DataTable'][] = 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css';
         $this->linkIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/css/dataTables.semanticui.min.css';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js';
         $this->scriptIncludes['DataTable'][] = 'https://cdn.datatables.net/1.11.3/js/dataTables.semanticui.min.js';
@@ -100,6 +108,9 @@ class DataTable {
         $this->scriptIncludes['Buttons'] = [];
         $this->linkIncludes['Buttons'][] = 'https://cdn.datatables.net/buttons/2.0.1/css/buttons.' . $style . 'min.css';
         $this->scriptIncludes['Buttons'][] = 'https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js';
+        $this->scriptIncludes['Buttons'][] = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js';
+        $this->scriptIncludes['Buttons'][] = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js';
+        $this->scriptIncludes['Buttons'][] = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js';
         $this->scriptIncludes['Buttons'][] = 'https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js';
         $this->scriptIncludes['Buttons'][] = 'https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js';
         $this->scriptIncludes['Buttons'][] = 'https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js';
@@ -111,8 +122,8 @@ class DataTable {
         $style = $this->style . ".";
         $this->linkIncludes['ColReorder'] = [];
         $this->scriptIncludes['ColReorder'] = [];
-        $this->linkIncludes['ColReorder'][] = 'https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js';
-        $this->scriptIncludes['ColReorder'][] = 'https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.' . $style . 'min.css';
+        $this->linkIncludes['ColReorder'][] = 'https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.' . $style . 'min.css';
+        $this->scriptIncludes['ColReorder'][] = 'https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js';
         return $this;
     }
     public function extFixedColumns() {
@@ -218,8 +229,8 @@ class DataTable {
     public function addRow($row) {
         $this->data[] = $row;
     }
-    public function addOption($option) {
-        $this->options[] = $option;
+    public function addOption($key, $value) {
+        $this->options[$key] = $value;
     }
     public function setOptions($options) {
         $this->options = $options;
@@ -235,7 +246,9 @@ class DataTable {
         $this->installedLinkIncludes = true;
     }
     public function create() {
-        $html = "<table id='" . $this->identifer . "' class='" . $this->tableClasses . "'><thead><tr>";
+        $html = "";
+        $html .= '<div id="' . $this->identifer . '-buttons" style="margin-top: 40px; margin-bottom: 40px;"></div>';
+        $html .= "<table id='" . $this->identifer . "' class='" . $this->tableClasses . "'><thead><tr>";
         foreach ($this->headers as $index => $headers) {
             foreach ($headers as $header => $attributes) {
                 $attrs = '';
@@ -269,8 +282,17 @@ class DataTable {
         }
         ?>
 <script>
-    var table_<?= $this->identifer ?> = $('#<?= $this->identifer ?>').DataTable()
-        <?= !empty($this->options) ? ".options({" . json_encode($this->options, JSON_PRETTY_PRINT) . "})" : ''; ?>;
+    var table_<?= $this->identifer ?> = $('#<?= $this->identifer ?>').DataTable(<?= !empty($this->options) ? "" . json_encode($this->options, JSON_PRETTY_PRINT) . "" : ''; ?>);
+    <?php
+        if (!empty($this->scriptIncludes['Buttons'])) {
+            ?>
+    $(function() {
+        $("#<?= $this->identifer; ?>").DataTable().buttons().container()
+            .appendTo('#<?= $this->identifer; ?>-buttons');
+    });
+    <?php
+        }
+    ?>
 </script>
         <?php
         $this->installedScriptIncludes = true;

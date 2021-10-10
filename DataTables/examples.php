@@ -2,7 +2,7 @@
 use DataTables\DataTable;
 include_once 'DataTable.php';
 $datatable = new DataTable('datatable');
-$datatable->extFixedHeader()->extButtons()->extSearchBuilder();
+$datatable->withBootstrap5()->extResponsive()->extFixedHeader()->extColReorder()->extButtons()->extSearchBuilder();
 $dummyData = '[
 	{
 		"name": "Kuame Boyd",
@@ -107,6 +107,15 @@ foreach ($datas as $row) {
     $country = $row['country'];
     $datatable->addRow("<tr><td>$name</td><td>$phone</td><td>$email</td><td>$address</td><td>$postal</td><td>$region</td><td>$country</td></tr>");
 }
+$datatable->addOption("responsive", true);
+$datatable->addOption("fixedHeader", ["header" => true]);
+$datatable->addOption('colReorder', true);
+$datatable->addOption("buttons", [
+    ['extend' => 'searchBuilder'],
+    ['extend' => 'copy'],
+    ['extend' => 'excel'],
+    ['extend' => 'colvis']
+]);
 $datatable->installLinkIncludes();
 echo $datatable->create();
 $datatable->installScriptIncludes();
