@@ -116,6 +116,4 @@ $datatable->addOption("buttons", [
     ['extend' => 'excel'],
     ['extend' => 'colvis']
 ]);
-$datatable->installLinkIncludes();
-echo $datatable->create();
-$datatable->installScriptIncludes();
+$datatable->createFull();

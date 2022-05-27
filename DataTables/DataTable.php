@@ -5,11 +5,9 @@ class DataTable {
     private $headers;
     private $options;
     private $linkIncludes = [];
-    private $installedLinkIncludes = false;
     private $tableClasses = 'table table-striped table-hover';
     private $data;
     private $scriptIncludes = [];
-    private $installedScriptIncludes = false;
     private $style;
     public function __construct($identifier) {
         $this->identifer = $identifier;
@@ -243,11 +241,10 @@ class DataTable {
             }
             echo "<!-- END $type -->";
         }
-        $this->installedLinkIncludes = true;
     }
     public function create() {
         $html = "";
-        $html .= '<div id="' . $this->identifer . '-buttons" style="margin-top: 40px; margin-bottom: 40px;"></div>';
+        $html .= '<div id="' . $this->identifer . '-buttons" style="margin-top: 40px; margin-bottom: 40px; text-align: center;"></div>';
         $html .= "<table id='" . $this->identifer . "' class='" . $this->tableClasses . "'><thead><tr>";
         foreach ($this->headers as $index => $headers) {
             foreach ($headers as $header => $attributes) {
@@ -264,7 +261,12 @@ class DataTable {
             $html .= $row;
         }
         $html .= "</table>";
-        return $html;
+        echo $html;
+    }
+    public function createFull() {
+        $this->installLinkIncludes();
+        $this->create();
+        $this->installScriptIncludes();
     }
     public function installScriptIncludes() {
         echo "<!-- START jQuery -->";
@@ -295,7 +297,6 @@ class DataTable {
     ?>
 </script>
         <?php
-        $this->installedScriptIncludes = true;
     }
     public function destroy() {}
 }
